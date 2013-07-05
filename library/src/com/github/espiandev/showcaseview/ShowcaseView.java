@@ -1,5 +1,6 @@
 package com.github.espiandev.showcaseview;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -497,7 +498,8 @@ public class ShowcaseView extends RelativeLayout implements View.OnClickListener
                 listener).start();
     }
 
-    @Override
+    @TargetApi(Build.VERSION_CODES.GINGERBREAD)
+	@Override
     public void onClick(View view) {
         // If the type is set to one-shot, store that it has shot
         if (mOptions.shotType == TYPE_ONE_SHOT) {
